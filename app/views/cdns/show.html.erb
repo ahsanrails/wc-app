@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cdn.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @cdn.email %>
+</p>
+<p>
+  <b>Avatar:</b>
+  <%= image_tag @cdn.avatar.url(:thumb) %>
+</p> 
+
+<%= link_to 'Edit', edit_cdn_path(@cdn) %> |
+<%= link_to 'Back', cdns_path %>
