@@ -7,11 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-<a href="/home" title="" class="btn logo"><h2>Wallchalking</h2></a>
+<div class="container-fluid">
+<a href="/home" title="" class="btn logo"><%= image_tag("logo.png", class:"logo-image") %></a>
 
-<a href="/users/sign_up" title="" class="btn btn_signup btn-lg">Sign-Up</a>
-<a href="/pdetails/new" title="" class="btn btn_post_property btn-lg">Post Property</a>
+<a href="/users/sign_up" title="" class="btn btn_signup">Sign-Up</a>
+<a href="/p_listings/new" title="" class="btn btn_post_property">Post Property</a>
 
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
@@ -21,14 +21,15 @@
 <%= yield %>
 
 
-<footer class="footer">
-<div class="row">
-<div class="col-md-4">
+<footer>
+<div class="container-fluid">
+<div class="footer">
+<div class="col-sm-4">
 <h4 class="txt-color align-left"><strong>Copyrights - Wallchalking Ltd.</strong></h4>
 </div>
-<div class="col-md-8">
-<h4 class="txt-color">
-<a href="#" class="align-right"><strong>About Us</strong></a>&nbsp;&nbsp;
+<div class="col-sm-8">
+<h4 class="txt-color right">
+<a href="#"><strong>About Us</strong></a>&nbsp;&nbsp;
 <a href="#"><strong>Contact</strong></a>&nbsp;&nbsp; 
 <a href="#"><strong>Contact Us</strong></a>&nbsp;&nbsp;
 <!-- <a href="#"><strong>impressum</strong></a>&nbsp;&nbsp; -->
@@ -37,6 +38,8 @@
 <a href="#" title="twitter" class="btn btn-icon-btn"><i class="entypo-twitter twt"></i></a>
 <a href="#" title="instagram" class="btn btn-icon-btn"><i class="entypo-instagram inst"></i></a>
 </h4>	
+</div>
+
 </div>
 </div>
 </footer>

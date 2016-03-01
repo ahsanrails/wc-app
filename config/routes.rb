@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :p_listings
   devise_for :users
   resources :pdetails
   resources :cdns

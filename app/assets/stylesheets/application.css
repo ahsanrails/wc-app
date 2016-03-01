@@ -14,4 +14,7 @@
  *= require_self
  *= require bootstrap
  *= require fonts
+
+ *= require font-awesome
+ 
  */

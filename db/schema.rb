@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160219150934) do
+ActiveRecord::Schema.define(version: 20160301111729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,31 @@ ActiveRecord::Schema.define(version: 20160219150934) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "p_listings", force: :cascade do |t|
+    t.string   "display_type"
+    t.string   "use_type"
+    t.string   "property_type"
+    t.string   "title"
+    t.string   "street"
+    t.string   "house_no"
+    t.string   "city_place"
+    t.string   "zip_code"
+    t.string   "flat_size"
+    t.string   "room"
+    t.string   "bathroom"
+    t.string   "total_rent"
+    t.string   "date"
+    t.string   "description"
+    t.string   "longitude"
+    t.string   "latitude"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "p_image_file_name"
+    t.string   "p_image_content_type"
+    t.integer  "p_image_file_size"
+    t.datetime "p_image_updated_at"
   end
 
   create_table "pdetails", force: :cascade do |t|
@@ -48,6 +73,29 @@ ActiveRecord::Schema.define(version: 20160219150934) do
     t.string   "propertyimage_content_type"
     t.integer  "propertyimage_file_size"
     t.datetime "propertyimage_updated_at"
+  end
+
+  create_table "plistings", force: :cascade do |t|
+    t.string   "display_type"
+    t.string   "use_type"
+    t.string   "property_type"
+    t.string   "title"
+    t.string   "street"
+    t.string   "house_no"
+    t.string   "city_place"
+    t.string   "zip_code"
+    t.string   "flat_size"
+    t.string   "room"
+    t.string   "bathroom"
+    t.string   "total_rent"
+    t.string   "date"
+    t.string   "description"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

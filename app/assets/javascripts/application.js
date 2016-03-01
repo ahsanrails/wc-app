@@ -16,7 +16,7 @@
 //= require_tree .
 
 $(function() {
-  $('#pdetail_propertyimage').on('change', function(event) {
+  $('#p_listing_p_image').on('change', function(event) {
     var files = event.target.files;
     var image = files[0]
     var reader = new FileReader();
