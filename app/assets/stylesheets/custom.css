@@ -13,8 +13,12 @@ body {
     /*background-repeat: no-repeat;*/
     /*opacity: 0.6;*/
     background-attachment:fixed;
-   font-family: 'Bryant';   
+   /*font-family: 'Bryant';*/   
  
+}
+.test-font
+{
+    font-family: 'Bryant-Regular';
 }
 .logo-image
 {
@@ -33,12 +37,16 @@ body {
   line-height: 1.9;
   background-color: rgba(105,105,100,0.7);
 }
+.note
+{
+ color:#FF4500;   
+}
 .glyphicon-search{
     font-size: 30px;
 }
 .main_search
 {
-    margin-top: 100px;
+    margin-top: 130px;
 }
 .txt-color
 {
@@ -54,6 +62,12 @@ body {
  color:white;
  text-decoration:none; 
 }
+
+h4 a, h4 a:hover, h4 a:focus, h4 a:visited
+{
+ color:white;
+ text-decoration:none;   
+}
 .align-right
 {
  margin-left:200px;
@@ -61,6 +75,20 @@ body {
 .align-left
 {
  line-height:30.8px;
+}
+.footer
+{
+ margin-top:260px;
+ position: relative;
+}
+.right
+{
+    float:right;
+}
+.left
+{
+    float:left;
+    line-height:1.5;
 }
 .search-input::-webkit-input-placeholder {
 color: white !important;
@@ -83,7 +111,6 @@ font-family: 'Bryant';
 background-color: transparent;
 border-radius: 0;
 margin-top:4px;
-margin-left:30px;
 color: white;
 text-decoration:none;
 }
@@ -115,7 +142,6 @@ text-decoration:none;
     color: white;
     border: 1px solid #DFC12A; /*yellow*/
 	width:185px;
-	margin-right:30px;
 	margin-top:30px;
 	float:right;
 	text-align:center;
@@ -128,17 +154,17 @@ text-decoration:none;
 }
 
 .btn-save {
-    background-color: transparent;
+    background-color: #DFC12A;
     border-radius: 0;
-    color: #DFC12A;
+    color: white;
     border: 1px solid #DFC12A;
-	width:160px;
-    height:40px;
+	width:150px;
+    height:35px;
 	margin-right:0px;
 	margin-top:30px;
 	float:right;
 	text-align:center;
-    line-height: 0.3333;
+    line-height: 0.6666;
 }
 .btn-save:active, .btn-save:hover {
     background-color: #DFC12A;
@@ -149,16 +175,16 @@ text-decoration:none;
 .btn-back {
     background-color: transparent;
     border-radius: 0;
-    color: #DFC12A;
-    border: 1px solid #DFC12A;
-    width:160px;
-    height:40px;
+    color: black;
+    border: 1px solid #ccc;
+    width:150px;
+    height:35px;
     margin-right:0px;
     margin-top:30px;
     /*float:right;*/
     text-align:center;
-    line-height: 0.8888;
-    margin-left: 125px;
+    line-height: 0.6666;
+    margin-left: 145px;
 }
 .btn-back:active, .btn-back:hover {
     background-color: #DFC12A;
@@ -174,12 +200,9 @@ text-decoration:none;
     width:120px;
     height:32px;
     font-size: 18px;
-/*    margin-left:150px;
-    margin-top:90px;*/
-    /*float:right;*/
     text-align:center;
     line-height: 1.6;
-    /*margin-left: 82px;*/
+
 }
 .btn-upload:active, .btn-upload:hover {
     background-color: #4487FB;
@@ -286,6 +309,25 @@ padding-right: 30px;
     margin-top:-17px;
     pointer-events: none;
 }
+
+
+.calender-icon {
+    position: relative;
+}
+.calender-icon input
+{
+padding-right: 30px;
+}
+.calender-icon span
+{
+position: absolute;
+    color: #ccc;
+    right: 0px;
+    margin-top: 8px;
+    margin-right: 10px;
+    pointer-events: none;
+}
+
 .search-up::-webkit-input-placeholder {
 color: white !important;
 font-family: 'Bryant';
@@ -308,14 +350,7 @@ font-family: 'Bryant';
     margin-left: 250px;
 	padding-right:260px;
 }
-.footer
-{
- margin-top:230px;
-}
-.right
-{
-    float:right;
-}
+
 .panel-transparent
 {
  background-color: transparent;
@@ -413,4 +448,34 @@ border: 1px solid #FF4500;
  width:100%;
  border: 1px solid #ccc;
 
+}
+
+.rad{
+  cursor: pointer;
+  margin: auto 0 !important;
+}
+.rad > input{ /* HIDE ORG RADIO & CHECKBOX */
+  visibility: hidden;
+  position: absolute;
+}
+
+.rad > i
+{     /* DEFAULT <i> STYLE */
+  display: inline-block;
+  vertical-align: middle;
+  width:  12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: 0.2s;
+  box-shadow: inset 0 0 0 8px #fff;
+  border: 2px solid black;
+  background: gray;
+}
+.rad:hover > i{ /* HOVER <i> STYLE */
+  box-shadow: inset 0 0 0 3px #fff;
+  background: black;
+}
+.rad > input:checked + i{ /* (RADIO CHECKED) <i> STYLE */
+  box-shadow: inset 0 0 0 3px #fff;
+  background: black;
 }

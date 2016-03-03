@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -29,4 +30,10 @@ $(function() {
     reader.readAsDataURL(image);
     console.log(files);
   });
+
+  $( "#datepicker" ).datepicker();
+
+
 });
+
+ 

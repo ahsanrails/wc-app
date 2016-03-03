@@ -1315,7 +1315,8 @@ small,
 mark,
 .mark {
   padding: .2em;
-  background-color: #fcf8e3;
+  /*background-color: #fcf8e3;*/ /*default property*/
+  background-color: transparent;  /*custom property*/
 }
 .text-left {
   text-align: left;

@@ -1,81 +1,13 @@
 @charset "UTF-8";
 
-/* Bryant Web Light */
-@font-face {
-  font-family: 'Bryant';
-  font-style: normal;
-  font-weight: 300;
-  src: asset-url("../fonts/bryant/BryantWebLight.eot");
-  src: local('Bryant Light'), local('Bryant-Light'), asset-url("../fonts/bryant/BryantWebLight.eot?#iefix") format("embedded-opentype"), asset-url("../fonts/bryant/BryantWebLight.woff") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
 
-/* Bryant Web Light Italic */
-@font-face {
-  font-family: 'Bryant';
-  font-style: italic;
-  font-weight: 300;
-  src: asset-url("../fonts/bryant/BryantWebLightItalic.eot");
-  src: local('Bryant Light Italic'), local('Bryant-Light-Italic'), asset-url("../fonts/bryant/BryantWebLightItalic.eot?#iefix") format("embedded-opentype"), asset-url("../fonts/bryant/BryantWebLightItalic.woff") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
+
 
 /* Bryant Web Regular */
 @font-face {
-  font-family: 'Bryant';
+  font-family: 'Bryant-Regular';
   font-style: normal;
   font-weight: normal;
-  src: asset-url("BryantRegular.ttf");
-  src: local('Bryant Regular'), local('Bryant-Regular'), asset-url("BryantRegular.ttf") format("embedded-opentype"), asset-url("BryantRegular.ttf") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+  src: url("BryantRegularRegular.otf") format("opentype");
 }
 
-/* Bryant Web Regular Italic */
-@font-face {
-  font-family: 'Bryant';
-  font-style: italic;
-  font-weight: 400;
-  src: asset-url("../fonts/bryant/BryantWebRegularItalic.eot");
-  src: local('Bryant Regular Italic'), local('Bryant-Regular-Italic'), asset-url("../fonts/bryant/BryantWebRegularItalic.eot?#iefix") format("embedded-opentype"), asset-url("../fonts/bryant/BryantWebRegularItalic.woff") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-
-/* Bryant Web Medium */
-@font-face {
-  font-family: 'Bryant';
-  font-style: normal;
-  font-weight: 500;
-  src: asset-url("../fonts/bryant/BryantWebMedium.eot");
-  src: local('Bryant Medium'), local('Bryant-Medium'), asset-url("../fonts/bryant/BryantWebMedium.eot?#iefix") format("embedded-opentype"), asset-url("../fonts/bryant/BryantWebMedium.woff") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-
-/* Bryant Web Medium Italic */
-@font-face {
-  font-family: 'Bryant';
-  font-style: italic;
-  font-weight: 500;
-  src: asset-url("../fonts/bryant/BryantWebMediumItalic.eot");
-  src: local('Bryant Medium Italic'), local('Bryant-Medium-Italic'), asset-url("../fonts/bryant/BryantWebMediumItalic.eot?#iefix") format("embedded-opentype"), asset-url("../fonts/bryant/BryantWebMediumItalic.woff") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-
-/* Bryant Web Bold */
-@font-face {
-  font-family: 'Bryant';
-  font-style: normal;
-  font-weight: 700;
-  src: asset-url("../fonts/bryant/BryantWebBold.eot");
-  src: local('Bryant Bold'), local('Bryant-Bold'), asset-url("../fonts/bryant/BryantWebBold.eot?#iefix") format("embedded-opentype"), asset-url("../fonts/bryant/BryantWebBold.woff") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-
-/* Bryant Web Bold Italic */
-@font-face {
-  font-family: 'Bryant';
-  font-style: italic;
-  font-weight: 700;
-  src: asset-url("../fonts/bryant/BryantWebBoldItalic.eot");
-  src: local('Bryant Bold Italic'), local('Bryant-Bold-Italic'), asset-url("../fonts/bryant/BryantWebBoldItalic.eot?#iefix") format("embedded-opentype"), asset-url("../fonts/bryant/BryantWebBoldItalic.woff") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}

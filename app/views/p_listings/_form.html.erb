@@ -9,31 +9,35 @@
       <% end %>
       </ul>
     </div>
+
   <% end %>
 
 
-   <div class="container">
-
-    <div class="col-md-8">
+    <div class="col-md-8 col-sm-10 col-xs-12">
       <div class="panel panel-default">
         <div class="panel-heading">
           <div class="panel-title"><h4>Property Advertisement</h4></div>
         </div>
-        <div class="panel-body">
+        <div class="panel-body test-font">
 
-  <div class="col-md-11 col-md-offset-2">
+  <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-2">
 <br><br>
 
 <div class="row">
-<div class="col-sm-9">
+<div class="col-md-9 col-sm-9 col-xs-10">
   
   <div class="radio-inputs">
     <div class="radio-inputs-lable"><span class="radio-label-span">Display Type</span></div>
     
-    <div style="margin-left:150px; line-height:2.9;">
+    <div style="margin-left:150px; line-height:2.5;">
 
-      <%= f.text_field :display_type, type:"radio", value:"Rent" %>&nbsp;&nbsp;Rent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <%= f.text_field :display_type, type:"radio", value:"Purchase" %>&nbsp;&nbsp;Purchase
+
+      <label class="rad">
+      <%= f.text_field :display_type, type:"radio", value:"Rent", class:"checkradios" %>
+      <i></i></label>&nbsp;Rent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <label class="rad">
+      <%= f.text_field :display_type, type:"radio", value:"Purchase" %><i></i></label>&nbsp;Purchase
   
     </div>
 
@@ -43,15 +47,17 @@
 </div>
 
 <div class="row">
-<div class="col-sm-9">
+<div class="col-md-9 col-sm-9 col-xs-10">
   
   <div class="radio-inputs">
     <div class="radio-inputs-lable"><span class="radio-label-span">Type of Use</span></div>
 
-  <div style="margin-left:150px; line-height:2.9;">
+  <div style="margin-left:150px; line-height:2.5;">
 
-      <%= f.text_field :use_type, type:"radio", value:"Living" %>&nbsp;&nbsp;Living&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <%= f.text_field :use_type, type:"radio", value:"Trade" %>&nbsp;&nbsp;Trade
+      <label class="rad">
+      <%= f.text_field :use_type, type:"radio", value:"Living" %><i></i></label>&nbsp;Living&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label class="rad">
+      <%= f.text_field :use_type, type:"radio", value:"Trade" %><i></i></label>&nbsp;Trade
   
   </div>
   </div>
@@ -60,15 +66,18 @@
 </div>
 
 <div class="row">
-<div class="col-sm-9">
+<div class="col-md-9 col-sm-9 col-xs-10">
   
   <div class="radio-inputs">
     <div class="radio-inputs-lable"><span class="radio-label-span">Property Type</span></div>
-        <div style="margin-left:150px; line-height:2.9;">
+        <div style="margin-left:150px; line-height:2.5;">
   
-      <%= f.text_field :property_type, type:"radio", value:"Apartment" %>&nbsp;&nbsp;Apartment&nbsp;&nbsp;&nbsp;
-      <%= f.text_field :property_type, type:"radio", value:"House" %>&nbsp;&nbsp;House&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <%= f.text_field :property_type, type:"radio", value:"Property" %>&nbsp;&nbsp;Property
+      <label class="rad">
+      <%= f.text_field :property_type, type:"radio", value:"Apartment" %><i></i></label>&nbsp;Apartment&nbsp;&nbsp;
+      <label class="rad">
+      <%= f.text_field :property_type, type:"radio", value:"House" %><i></i></label>&nbsp;House&nbsp;&nbsp;
+      <label class="rad">
+      <%= f.text_field :property_type, type:"radio", value:"Property" %><i></i></label>&nbsp;Property
 
     </div>
   </div>
@@ -77,72 +86,75 @@
 </div>
 
 <div class="row">
-<div class="col-sm-9">
+<div class="col-md-9 col-sm-9 col-xs-10">
   <%= f.text_field :title, class:"form-control", id:"p_listing_title", placeholder:"Title of the Display" %>
 </div><br><br>
 </div>
 
 <div class="row">
-<div class="col-sm-6 padding_colsm6">
+<div class="col-sm-6 col-xs-6 padding_colsm6">
   <%= f.text_field :street, class:"form-control", id:"p_listing_street", placeholder:"View Street" %>
 </div>
-<div class="col-sm-3 padding_colsm3">
+<div class="col-sm-3 col-xs-4 padding_colsm3">
   <%= f.text_field :house_no, class:"form-control", id:"p_listing_house_no", placeholder:"House No." %>
 </div><br><br>
 </div>
 
 <div class="row">
-<div class="col-sm-6 padding_colsm6">
+<div class="col-sm-6 col-xs-6 padding_colsm6">
   <%= f.text_field :city_place, class:"form-control", id:"p_listing_city_place", placeholder:"Place" %>
 </div>
-<div class="col-sm-3 padding_colsm3">
+<div class="col-sm-3 col-xs-4 padding_colsm3">
   <%= f.text_field :zip_code, class:"form-control", id:"p_listing_zip_code", placeholder:"Zip Code" %>
 </div><br><br>
 </div>
 
 <div class="row">
-<div class="col-sm-6 padding_colsm6">
-  <%= f.text_field :flat_size, class:"form-control", id:"p_listing_flat_size", placeholder:"Rasidential Flat" %>
+<div class="col-sm-6 col-xs-6 padding_colsm6">
+  <%= f.text_field :flat_size, class:"form-control", id:"p_listing_flat_size", placeholder:"Rasidential Area                                       m2" %>
 </div>
-<div class="col-sm-3 padding_colsm3">
+<div class="col-sm-3 col-xs-4 padding_colsm3">
   <%= f.text_field :room, class:"form-control", id:"p_listing_room", placeholder:"Room" %>
 </div><br><br>
 </div>
 
 <div class="row">
-<div class="col-sm-6 padding_colsm6">
+<div class="col-sm-6 col-xs-6 padding_colsm6">
   <%= f.text_field :total_rent, class:"form-control", id:"p_listing_total_rent", placeholder:"Total Rent(warm)" %>
 </div>
-<div class="col-sm-3 padding_colsm3">
+<div class="col-sm-3 col-xs-4 padding_colsm3">
   <%= f.text_field :bathroom, class:"form-control", id:"p_listing_bathroom", placeholder:"Bathroom" %>
 </div><br><br>
 </div>
 
 <div class="row">
-<div class="col-sm-6 padding_colsm6">
-  <%= f.text_field :date, class:"form-control", id:"p_listing_date", placeholder:"Available From" %>
-  <i class="entypo-calender"></i>
+<div class="col-sm-6 col-xs-6 padding_colsm6">
+
+<div class="calender-icon">
+<span><i class="fa fa-calendar fa-lg"></i></span> 
+     <%= f.text_field :date, id:"datepicker",:autocomplete => :off,  :placeholder => "Available From", class:"form-control" %>
+</div>
+
+
 </div><br><br>
 </div>
 
 <div class="row">
-<div class="col-sm-9">
-  <%= f.text_field :description, class:"form-control", id:"p_listing_description", placeholder:"Property Description (Max. 2000 Words)", style:"height:200px; width:100%;" %>
+<div class="col-md-9 col-sm-9 col-xs-10">
+  <%= f.text_area :description, class:"form-control", id:"p_listing_description", placeholder:"Property Description (Max. 2000 Words)", style:"height:200px; width:100%;" %>
 </div><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 
 <div class="row">
-<div class="col-sm-9">
+<div class="col-md-9 col-sm-9 col-xs-10">
 
 <div class="upload-box">
    <div class="upload-entypo">
-    
-    
-    <span id="target"><h2 class="entypo-camera" style="text-align:center; margin-top:52px;"></h2></span>
-    
+        
+<span id="target"><h2 style="text-align:center; margin-top:52px;"><i class="fa fa-camera"></i></h2></span>
     
     </div>
-    <p style="margin-top: 30px;"><strong>Add Photos</strong> Drag a Photo from a folder over here or click here to </p>
+    <p style="margin-top: 22px;"><strong>Add Photos</strong><br> Drag a Photo from a folder over here or click here to </p>
 
 <div class="fileUpload btn-upload">
 <span>Upload</span>
@@ -150,7 +162,8 @@
 
 </div>
 </div><br>
-<p>Allowed Formates for photos are .JPG, .PNG, .GIF Maximum Size is 5 MB.</p>
+<p><mark class="note">Note:</mark>
+Allowed Formates for photos are .JPG, .PNG, .GIF, Maximum Size is 5MB.</p>
 </div>
 </div>
 
@@ -163,8 +176,8 @@
     <%= f.text_field :latitude, type:"hidden" %>
   </div>
 
-  <div class="row">
-<div class="col-sm-9">
+<div class="row">
+<div class="col-md-9 col-sm-9 col-xs-10">
 
 <%= link_to 'Back', p_listings_path, class: "btn btn-back btn-lg" %>
 
@@ -177,6 +190,6 @@
 </div>
 </div>
 </div>
-</div>
+
 
 <% end %>

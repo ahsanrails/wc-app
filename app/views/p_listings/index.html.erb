@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
+
+
+<div class="container-fluid">
+
 
 <div class="row">
     <div class="col-md-8">
@@ -12,7 +15,7 @@
       <%= image_tag p_listing.p_image.url, :class => "style_image" %>
       <div class="rent-on-img">$ <%= p_listing.total_rent %></div>
       <div class="image-footer">
-        <p>City <%= p_listing.city_place %> - <%= p_listing.property_type %> at <%= p_listing.street %>
+        <p>City <%= p_listing.city_place %> - <%= p_listing.property_type %> at <%= p_listing.street %><br>
          Bathroom - <%= p_listing.bathroom %> | Bed - <%= p_listing.room %>
        </p>
         <%= link_to 'View', p_listing %>
@@ -28,7 +31,11 @@
 <% end %>
 
 </div>
+
+
 </div>
+
+
 
 <br><br>
 <nav>
