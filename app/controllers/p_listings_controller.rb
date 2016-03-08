@@ -5,16 +5,29 @@ class PListingsController < ApplicationController
   # GET /p_listings.json
   def index
     @p_listings = PListing.search(params[:search])
+    @search = Search.new
+    @ptypes = PListing.uniq.pluck(:property_type)
+    @rooms = PListing.uniq.pluck(:room)
+    @bathroom = PListing.uniq.pluck(:bathroom)
+    @rent_price = PListing.uniq.pluck(:total_rent)
   end
+
 
   # GET /p_listings/1
   # GET /p_listings/1.json
-  def show
-  end
+
+# def index
+#   @search = Search.new
+#   @ptypes = PListing.uniq.pluck(:property_type)
+#   @rooms = PListing.uniq.pluck(:room)
+#   @bathroom = PListing.uniq.pluck(:bathroom)
+#   @rent_price = PListing.uniq.pluck(:total_rent)
+# end
 
   # GET /p_listings/new
   def new
     @p_listing = PListing.new
+    @search = Search.new
   end
 
   # GET /p_listings/1/edit

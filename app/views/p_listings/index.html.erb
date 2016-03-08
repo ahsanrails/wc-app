@@ -1,39 +1,76 @@
 <p id="notice"><%= notice %></p>
 
 
-
+<br><br>
 <div class="container-fluid">
+
+<div class="col-md-9 col-sm-10 col-xs-12">
+
+
+
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div>
+
+  <div class="form-group">
+    <%= s.select :p_type, options_for_select(@ptypes), :include_blank => true, class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= s.select :bedroom, options_for_select(@rooms), :include_blank => true %>
+  </div>
+
+  <div class="field">
+    <%= s.select :bathroom, options_for_select(@bathroom), :include_blank => true %>
+  </div>
+
+  <div class="field">
+    <%= s.select :rent, options_for_select(@rent_price), :include_blank => true %>
+  </div>
+
+  <div class="action"><%= s.submit "Detailed Search", class: "btn-Dsearch" %></div>
+
+ <% end %>  
+
+
+
+<br><br>
 
 
 <div class="row">
-    <div class="col-md-8">
 
 <% @p_listings.each do |p_listing| %>
 
-  <div class="col-sm-6">
+  
     <div class="thumbnail">
       <%= image_tag p_listing.p_image.url, :class => "style_image" %>
       <div class="rent-on-img">$ <%= p_listing.total_rent %></div>
       <div class="image-footer">
         <p>City <%= p_listing.city_place %> - <%= p_listing.property_type %> at <%= p_listing.street %><br>
          Bathroom - <%= p_listing.bathroom %> | Bed - <%= p_listing.room %>
-       </p>
+       
         <%= link_to 'View', p_listing %>
         <%= link_to 'Edit', edit_p_listing_path(p_listing) %>
         <%= link_to 'Delete', p_listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+
       </div>
 
     </div>
 
-  </div>
+  <% end %>
 
-  
-<% end %>
-
-</div>
+ </div>
 
 
-</div>
 
 
 
@@ -57,9 +94,10 @@
     </li>
   </ul>
 </nav>
+
 <%= link_to 'Add New', new_p_listing_path, class: 'btn btn-default' %>
 </div>
-
+</div>
 
   
 
