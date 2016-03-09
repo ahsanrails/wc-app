@@ -5,12 +5,14 @@
 <div class="container-fluid">
 
 <div class="col-md-9 col-sm-10 col-xs-12">
-<%= link_to "Back", p_listings_path, class: "btn-default" %>
+
+<%= link_to "Back", p_listings_path, class: "btn btn-default" %>
+
 <div class="row">
 
 <% if @search.search_p_listings.empty? %>
 
-<p>No Record Found</p>
+<h1 style="color:white;" >No Record Found</h1>
 
 <% else %>
 

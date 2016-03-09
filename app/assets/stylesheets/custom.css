@@ -26,6 +26,66 @@ body {
  width:210px;
  /*margin-top: 0px;*/
 }
+.single_logo
+{
+    height: 45px;
+    width: 75px;
+    margin-top: 9px;
+    margin-left: -18px;
+}
+.logo-search-input {
+    color: white;
+    font-family: 'Bryant';
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid #F1C40F !important;
+    height: 36px;
+    width:435px;
+    border-radius: 0;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.logo-right-search-icon {
+    position: relative;
+    margin-top: 30px;
+}
+.logo-right-search-icon input
+{
+padding-right: 30px;
+
+}
+.logo-right-search-icon span
+{
+    position: absolute;
+    color:white;
+    right: 0px;
+    margin-top:-19px;
+    pointer-events: none;
+    margin-right: -270px;
+}
+
+/*.styleSelect select {
+  background: transparent;
+  width: 168px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  color: #000;
+}
+
+.styleSelect {
+  width: 140px;
+  height: 34px;
+  overflow: hidden;
+  background: url("images/downArrow.png") no-repeat right #fff;
+  border: 2px solid #000;
+}
+*/
 .rent-on-img
 {
    position: absolute;
@@ -214,18 +274,69 @@ text-decoration:none;
     border-radius: 0;
     color: white;
     border: 1px solid #F1C40F;
-    width:150px;
-    height:32px;
+    width:170px;
+    height:34px;
     font-size: 16px;
     text-align:center;
     line-height: 1.6;
-    /*float:right;*/
 
 }
 .btn-Dsearch:active, .btn-Dsearch:hover {
     background-color: #F1C40F;
     color: white;
     text-decoration:none;
+}
+
+.ptype_dropdown {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;   
+    border: 1px solid #F1C40F;
+    border-radius: 0px;   
+}
+.pbedroom_dropdown {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;   
+    border: 1px solid #F1C40F;
+    border-radius: 0px;   
+}
+.pbathroom_dropdown {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;   
+    border: 1px solid #F1C40F;
+    border-radius: 0px;   
+}
+.prent_dropdown {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;   
+    border: 1px solid #F1C40F;
+    border-radius: 0px;   
+}
+.form-inline > * {
+   margin:2px 2px;
 }
 .fileUpload {
     position: relative;
@@ -410,7 +521,7 @@ font-family: 'Bryant';
     padding-bottom: 0px;
 	margin-left: -10px;
 	margin-right: 15px;
-    margin-top: 0px;
+    margin-top: -10px;
     margin-bottom: 15px;
     border:transparent;
 }
