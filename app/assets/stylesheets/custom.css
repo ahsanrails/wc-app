@@ -33,6 +33,10 @@ body {
     margin-top: 9px;
     margin-left: -18px;
 }
+.logo-search-input::-webkit-input-placeholder {
+color: white !important;
+font-family: 'Bryant';
+}
 .logo-search-input {
     color: white;
     font-family: 'Bryant';
