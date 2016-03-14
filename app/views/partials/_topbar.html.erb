@@ -30,12 +30,14 @@
 <div class="col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
 
 
-
 <%= link_to "Sign Out", destroy_user_session_path, method: :delete , class:"btn btn-danger btn-sm" %>
+
 
 <%= link_to "SignUp", new_user_registration_path, class:"btn btn_signup" %>
 
-<a href="/p_listings/new" title="" class="btn btn_post_property">Post Property</a>
+
+<%= link_to "Post Property", new_p_listing_path, class:"btn btn_post_property"  %>
+
 </div>
 
 

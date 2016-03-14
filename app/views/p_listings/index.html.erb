@@ -47,13 +47,13 @@
       <%= image_tag p_listing.p_image.url, :class => "style_image" %>
       <div class="rent-on-img">$ <%= p_listing.total_rent %></div>
       <div class="image-footer">
-        <p>City <%= p_listing.city_place %> - <%= p_listing.property_type %> at <%= p_listing.street %><br>
+        <div class="footer-text">City <%= p_listing.city_place %> - <%= p_listing.property_type %> at <%= p_listing.street %><br>
          Bathroom - <%= p_listing.bathroom %> | Bed - <%= p_listing.room %>
        
         <%= link_to 'View', p_listing %>
         <%= link_to 'Edit', edit_p_listing_path(p_listing) %>
         <%= link_to 'Delete', p_listing, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </p>
+        </div>
 
       </div>
 

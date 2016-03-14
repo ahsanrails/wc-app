@@ -10,6 +10,13 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+//= require bootstrap/alert
+//= require bootstrap/button
+//= require bootstrap/dropdown
+//= require bootstrap/modal
+//= require bootstrap/transition
+
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
@@ -37,8 +44,3 @@ $(function() {
 
  
 
-$(document).ready(function(){
-    $("#myBtn").click(function(){
-        $("#myModal").modal();
-    });
-});

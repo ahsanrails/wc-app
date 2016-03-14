@@ -8,17 +8,23 @@
     margin: 0;
 }
 
+@font-face
+{
+    font-family: "Bryant";
+    src: url('/assets/bryantregular');
+}
+
 body {
     background-image: url("image5.jpg");
     /*background-repeat: no-repeat;*/
     /*opacity: 0.6;*/
     background-attachment:fixed;
-   /*font-family: 'Bryant';*/   
+    font-family: 'Bryant';   
  
 }
 .test-font
 {
-    font-family: 'Bryant-Regular';
+    font-family: 'Bryant';
 }
 .logo-image
 {
@@ -41,7 +47,6 @@ font-family: 'Bryant';
     color: white;
     font-family: 'Bryant';
     font-size: 16px;
-    font-weight: bold;
     background-color: transparent;
     border: 1px solid #F1C40F !important;
     height: 36px;
@@ -155,7 +160,7 @@ h4 a, h4 a:hover, h4 a:focus, h4 a:visited
     line-height:1.5;
 }
 .search-input::-webkit-input-placeholder {
-color: white !important;
+color: white;
 font-family: 'Bryant';
 }
 .search-input  
@@ -163,7 +168,6 @@ font-family: 'Bryant';
  color:white;
  font-family: 'Bryant';
  font-size:18px;
- font-weight: bold;
  background-color:rgba(0,0,0,0) !important;
  border:1px solid #F1C40F !important;
  height:45px;
@@ -185,6 +189,7 @@ text-decoration:none;
 }
 .btn_post_property, .btn_post_property:link, .btn_post_property:visited {
     background-color: transparent;
+    font-family: "Bryant";
     border-radius: 0;
     color: white;
     border: 1px solid #FF4500; /*red*/
@@ -194,6 +199,8 @@ text-decoration:none;
 	float:right;
 	text-align:center;
     height:36px;
+    font-size: 18px;
+    line-height: 1.2222;
 }
 .btn_post_property:active, .btn_post_property:hover {
     background-color: #FF4500; 
@@ -202,6 +209,7 @@ text-decoration:none;
 }
 .btn_signup, .btn_signup:link, .btn_signup:visited {
     background-color: transparent;
+    font-family: "Bryant";
     border-radius: 0;
     color: white;
     border: 1px solid #F1C40F; /*yellow*/
@@ -210,6 +218,8 @@ text-decoration:none;
 	float:right;
 	text-align:center;
     height:36px;
+    font-size: 18px;
+    line-height: 1.2222;
 }
 .btn_signup:active, .btn_signup:hover {
     background-color: #F1C40F;
@@ -219,6 +229,7 @@ text-decoration:none;
 
 .btn-save {
     background-color: #F1C40F;
+    font-family: "Bryant";
     border-radius: 0;
     color: white;
     border: 1px solid #F1C40F;
@@ -245,10 +256,10 @@ text-decoration:none;
     height:35px;
     margin-right:0px;
     margin-top:30px;
-    /*float:right;*/
+    font-family: "Bryant";
     text-align:center;
     line-height: 0.6666;
-    margin-left: 145px;
+    margin-left: 108px;
 }
 .btn-back:active, .btn-back:hover {
     background-color: #F1C40F;
@@ -258,6 +269,7 @@ text-decoration:none;
 
 .btn-upload {
     background-color: transparent;
+    font-family: "Bryant";
     border-radius: 0;
     color: #4487FB;
     border: 1px solid #4487FB;
@@ -274,6 +286,7 @@ text-decoration:none;
     text-decoration:none;
 }
 .btn-Dsearch {
+    font-family: "Bryant";
     background-color: #F1C40F;
     border-radius: 0;
     color: white;
@@ -296,7 +309,7 @@ text-decoration:none;
     width: 100%;
     height: 34px;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.42857143;
     color: #555;
     background-color: #fff;   
@@ -308,7 +321,7 @@ text-decoration:none;
     width: 100%;
     height: 34px;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.42857143;
     color: #555;
     background-color: #fff;   
@@ -320,7 +333,7 @@ text-decoration:none;
     width: 100%;
     height: 34px;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.42857143;
     color: #555;
     background-color: #fff;   
@@ -332,13 +345,14 @@ text-decoration:none;
     width: 100%;
     height: 34px;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.42857143;
     color: #555;
     background-color: #fff;   
     border: 1px solid #F1C40F;
     border-radius: 0px;   
 }
+
 .form-inline > * {
    margin:2px 2px;
 }
@@ -498,7 +512,7 @@ font-family: 'Bryant';
 }
 .property-thumb
 {
-
+font-family: "Bryant";
     height: 100%;
     width: 800px;
     float: left;
@@ -513,6 +527,7 @@ font-family: 'Bryant';
     width: 350px;
     display: block;
     float:left;
+    font-family: "Bryant";
 /*    height: 330px;
     width: 325px;*/
 	background-color: transparent;
@@ -525,7 +540,7 @@ font-family: 'Bryant';
     padding-bottom: 0px;
 	margin-left: -10px;
 	margin-right: 15px;
-    margin-top: -10px;
+    /*margin-top: -10px;*/
     margin-bottom: 15px;
     border:transparent;
 }
@@ -536,14 +551,15 @@ font-family: 'Bryant';
 }
 .image-footer
 {
-    /*height: 100%;*/
+    height:60px;
     width: 100%;
-/*    height: 73px;
-    width: 323px;
-    margin-left: 1px;*/
-    background-color: white;
-    /*text-align: center;*/
-    
+    background-color: white;   
+}
+.footer-text
+{
+    margin-left: 10px;
+    margin-top: 0px;
+    font-size: 16px;
 }
 .image-footer > p 
 {
@@ -561,6 +577,7 @@ font-family: 'Bryant';
 }
 .thumbnail-footer
 {
+    font-family: "Bryant";
     width: 323px;
     height: 74px;
     margin-left: -30px;

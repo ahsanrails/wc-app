@@ -18,6 +18,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'json', '~> 1.8.2'
 # Use jquery as the JavaScript library
 gem 'jquery-ui-rails'
+gem 'jquery-modal-rails'
+
 gem 'less-rails-bootstrap', '~> 3.0'
 gem 'less-rails', '~> 2.7.0'
 gem "font-awesome-rails"
@@ -42,6 +44,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+# gem "haml-rails", "~> 0.9"
+
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'

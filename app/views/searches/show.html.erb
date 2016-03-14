@@ -23,9 +23,9 @@
       <%= image_tag c.p_image.url, :class => "style_image" %>
       <div class="rent-on-img">$ <%= c.total_rent %></div>
       <div class="image-footer">
-        <p>City <%= c.city_place %> - <%= c.property_type %> at <%= c.street %><br>
+        <div class="footer-text">City <%= c.city_place %> - <%= c.property_type %> at <%= c.street %><br>
          Bathroom - <%= c.bathroom %> | Bed - <%= c.room %>
-        </p>
+        </div>
 
       </div>
 
