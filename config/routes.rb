@@ -1,10 +1,27 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => {
+
+    :registrations => "users/registrations",
+    :sessions => "users/sessions",
+    :passwords => "users/passwords",
+    :confirmations => "users/confirmations"
+  }
+
+  devise_scope :user do
+    get "signup", to: "users/registrations#new"
+    get "signin", to: "users/sessions#new"
+    delete "signout", to: "users/sessions#destroy"
+  end
+
+
   resources :p_listings
-  devise_for :users
+  #devise_for :users
   resources :pdetails
   resources :cdns
   resources :home
   resources :searches
+
+  # get "project/new_release" => 'project#new_release', :as => :new_release
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

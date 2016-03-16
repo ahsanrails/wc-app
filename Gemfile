@@ -20,6 +20,8 @@ gem 'json', '~> 1.8.2'
 gem 'jquery-ui-rails'
 gem 'jquery-modal-rails'
 
+gem 'gmaps4rails'
+
 gem 'less-rails-bootstrap', '~> 3.0'
 gem 'less-rails', '~> 2.7.0'
 gem "font-awesome-rails"

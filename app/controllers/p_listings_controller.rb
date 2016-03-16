@@ -13,6 +13,7 @@ class PListingsController < ApplicationController
   end
 
 
+
   # GET /p_listings/1
   # GET /p_listings/1.json
 
