@@ -75,26 +75,6 @@ padding-right: 30px;
     margin-right: -265px;
 }
 
-/*.styleSelect select {
-  background: transparent;
-  width: 168px;
-  padding: 5px;
-  font-size: 16px;
-  line-height: 1;
-  border: 0;
-  border-radius: 0;
-  height: 34px;
-  color: #000;
-}
-
-.styleSelect {
-  width: 140px;
-  height: 34px;
-  overflow: hidden;
-  background: url("images/downArrow.png") no-repeat right #fff;
-  border: 2px solid #000;
-}
-*/
 .rent-on-img
 {
    position: absolute;
@@ -182,10 +162,102 @@ margin-top:-3px;
 color: white;
 text-decoration:none;
 }
+
 .logo:active, .logo:hover {
     background-color: transparent;
     color: white;
     text-decoration:none;	
+}
+    .login_field_height
+{
+    height:40px;
+}
+.login_field_height::-webkit-input-placeholder {
+color: black !important;
+font-family: 'Bryant';
+font-weight: bold;
+font-size: 16px;
+}  
+
+.email {
+  position: relative;
+  font-size: 18px;
+}
+.email .fa-at { 
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    color:#ccc;
+}
+.password {
+  position: relative;
+  font-size: 18px;
+  margin-top: -7px;
+}
+.register-password {
+  position: relative;
+  font-size: 18px;
+  margin-top: -24px;
+}
+.rp-password {
+  position: relative;
+  font-size: 18px;
+  margin-top: -7px;
+}
+.password .fa-lock { 
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    color:#ccc;
+}
+.register-password .fa-lock { 
+    position: absolute;
+    top: 30px;
+    right: 12px;
+    color:#ccc;
+}
+.rp-password .fa-lock
+{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    color:#ccc;
+}
+.btn_register{
+    background-color: #F1C40F;
+    font-family: "Bryant";
+    border-radius: 0;
+    color: white;
+    border: 0px solid #F1C40F; /*yellow*/
+    width:100%;
+    float:right;
+    text-align:center;
+    height:40px;
+    font-size: 20px;
+    font-style: bold;
+    line-height: 1.2222;
+}
+.btn_login{
+    background-color: #F1C40F;
+    font-family: "Bryant";
+    border-radius: 0;
+    color: white;
+    border: 0px solid #F1C40F; /*yellow*/
+    width:100%;
+    float:right;
+    text-align:center;
+    height:40px;
+    font-size: 20px;
+    font-style: bold;
+    line-height: 1.2222;
+}
+.header-margin
+{
+border-bottom: 0px;
+}
+.footer-margin
+{
+border-top: 2px;
 }
 .btn_post_property, .btn_post_property:link, .btn_post_property:visited {
     background-color: transparent;
@@ -666,4 +738,30 @@ border: 1px solid #FF4500;
 {
     width: 45%; height: 650px; border: 1px solid red; float: right; margin-right:15px;
     position:relative;
+}
+
+.btn-facebook{
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,0.2);
+    border-radius: 0px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+
+    }.btn-facebook:hover,.btn-facebook:focus,.btn-facebook:active,.btn-facebook.active,.open>.dropdown-toggle.btn-facebook{color:#fff;background-color:#2d4373;border-color:rgba(0,0,0,0.2)}
+.btn-facebook:active,.btn-facebook.active,.open>.dropdown-toggle.btn-facebook{background-image:none}
+.btn-facebook.disabled,.btn-facebook[disabled],fieldset[disabled] .btn-facebook,.btn-facebook.disabled:hover,.btn-facebook[disabled]:hover,fieldset[disabled] .btn-facebook:hover,.btn-facebook.disabled:focus,.btn-facebook[disabled]:focus,fieldset[disabled] .btn-facebook:focus,.btn-facebook.disabled:active,.btn-facebook[disabled]:active,fieldset[disabled] .btn-facebook:active,.btn-facebook.disabled.active,.btn-facebook[disabled].active,fieldset[disabled] .btn-facebook.active{background-color:#3b5998;border-color:rgba(0,0,0,0.2)}
+.btn-facebook .badge{color:#3b5998;background-color:#fff}
+.facebook-icon
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    line-height: 39px !important; 
+    font-size: 1.1em !important;
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.2);
 }
