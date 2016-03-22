@@ -16,10 +16,11 @@
   <%= csrf_meta_tags %>
 
 
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> <!-- for calender input field -->
 
-
+  
+ 
 
 </head>
 <body>
@@ -28,8 +29,8 @@
 
 <%= render 'partials/topbar' %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<p class="notice" style="color: white;"><%= notice %></p>
+<p class="alert" style="color: white;"><%= alert %></p>
 
 
 <%= yield %>

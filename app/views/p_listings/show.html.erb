@@ -1,102 +1,12 @@
-  
-    <!-- Google Maps API -->
-    <script>
-    var map;    // Google map object
-    
-    // Initialize and display a google map
-    function Init()
-    {
-        var loc = [
-        ['<%= @p_listing.city_place %>',<%= @p_listing.latitude %>, <%= @p_listing.longitude %>]
-        ];
-        // Create a Google coordinate object for where to initially center the map
-        var latlng = new google.maps.LatLng( <%= @p_listing.latitude %>,<%= @p_listing.longitude %> );   // Washington, DC
-        
-        // Map options for how to display the Google map
-        var mapOptions = { zoom: 15, center: latlng  };
-//https://cdn3.iconfinder.com/data/icons/real-estate-2/500/home_house_real_estate_apartment_building_land_land_for_sale_sale-512.png
-        var icon = {
-    url: "http://i.stack.imgur.com/NgrnX.png", // url
-    scaledSize: new google.maps.Size(40, 30), // scaled size
-    origin: new google.maps.Point(0,0), // origin
-    anchor: new google.maps.Point(0, 0) // anchor
-};
-        
-        // Show the Google map in the div with the attribute id 'map-canvas'.
-        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        var marker, i;
-        for (i=0; i < loc.length; i++) {
-        marker = new google.maps.Marker({
-            map:map,
-            draggable: false,
-            position: new google.maps.LatLng(loc[i][1], loc[i][2]),
-            title: loc[i][0],
-            icon: icon
-          });
-        marker.setMap(map);
-    }
-}    
-    // Update the Google map for the user's inputted address
-    function UpdateMap( )
-    {
-        var geocoder = new google.maps.Geocoder();    // instantiate a geocoder object
-        
-        // Get the user's inputted address
-        var address = document.getElementById( "address" ).value;
-    
-        // Make asynchronous call to Google geocoding API
-        geocoder.geocode( { 'address': address }, function(results, status) {
-            var addr_type = results[0].types[0];    // type of address inputted that was geocoded
-            if ( status == google.maps.GeocoderStatus.OK ) 
-                ShowLocation( results[0].geometry.location, address, addr_type );
-            else     
-                alert("Geocode was not successful for the following reason: " + status);        
-        });
-    }
-    // Show the location (address) on the map.
-    function ShowLocation( latlng, address, addr_type )
-    {
-        // Center the map at the specified location
-        map.setCenter( latlng );
-        
-        // Set the zoom level according to the address level of detail the user specified
-        var zoom = 12;
-        switch ( addr_type )
-        {
-        case "administrative_area_level_1"  : zoom = 6; break;      // user specified a state
-        case "locality"                     : zoom = 10; break;     // user specified a city/town
-        case "street_address"               : zoom = 16; break;     // user specified a street address
-        }
-        map.setZoom( zoom );
-        
-        // Place a Google Marker at the same location as the map center 
-        // When you hover over the marker, it will display the title
-        var marker = new google.maps.Marker( { 
-            position: latlng,     
-            map: map,      
-            title: address
-        });
-        
-        // Create an InfoWindow for the marker
-        var contentString = "" + address + "";  // HTML text to display in the InfoWindow
-        var infowindow = new google.maps.InfoWindow( { content: contentString } );
-        
-        // Set event to display the InfoWindow anchored to the marker when the marker is clicked.
-        google.maps.event.addListener( marker, 'click', function() { infowindow.open( map, marker ); });
-    }
-    
-    // Call the method 'Init()' to display the google map when the web page is displayed ( load event )
-    google.maps.event.addDomListener( window, 'load', Init );
-    </script>
-   
 
    <br><br>
 <p id="notice"><%= notice %></p>
 
 <div class="container-fluid">
 
-<div class="row">
-    <div class="col-md-7 col-sm-10 col-xs-12">
+
+    <div class="col-md-6 col-sm-10 col-xs-12">
+      <div class="row">
       <div class="panel panel-default">
         <div class="panel-heading">
           <div class="panel-title"><h4>Property Detail</h4></div>
@@ -120,6 +30,8 @@
         <tr><th><strong>Total Rent:</strong></th><td><%= @p_listing.total_rent %></td></tr>
         <tr><th><strong>Available From:</strong></th><td><%= @p_listing.date %></td></tr>
         <tr><th><strong>Description:</strong></th><td><%= @p_listing.description %></td></tr>
+        <tr><th><strong>Long.:</strong></th><td><%= @p_listing.longitude %></td></tr>
+        <tr><th><strong>Lat.:</strong></th><td><%= @p_listing.latitude %></td></tr>
         <tr><th><strong>Property Image:</strong></th><td><%= image_tag @p_listing.p_image.url(:small) %>
         </td></tr>
 
@@ -133,15 +45,29 @@
 </div>
 </div>
 
- <div class="col-md-5 hidden-xs hidden-sm">
-  <div id="map-canvas"></div>
-</div>
-<div class="col-md-4">
-     <br>
-  <%= image_tag @p_listing.p_image.url(:small), class: "new_image_dim" %>
-</div>
+
 
 </div>
+
+<div class="hidden-xs hidden-sm">
+
+<div class="row">
+
+  <div class="map-div" id="map">
+
+  </div>
+  
+</div>
+</div>
+
+<script type="text/javascript">
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+</script>
 
 </div>
 

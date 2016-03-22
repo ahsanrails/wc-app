@@ -70,9 +70,9 @@ padding-right: 30px;
     position: absolute;
     color:white;
     right: 0px;
-    margin-top:-19px;
+    margin-top:-20px;
     pointer-events: none;
-    margin-right: -270px;
+    margin-right: -265px;
 }
 
 /*.styleSelect select {
@@ -207,7 +207,7 @@ text-decoration:none;
     color: white;
 	text-decoration:none;
 }
-.btn_signup, .btn_signup:link, .btn_signup:visited {
+.btn_signin, .btn_signin:link, .btn_signin:visited {
     background-color: transparent;
     font-family: "Bryant";
     border-radius: 0;
@@ -221,12 +221,31 @@ text-decoration:none;
     font-size: 18px;
     line-height: 1.2222;
 }
-.btn_signup:active, .btn_signup:hover {
+.btn_signin:active, .btn_signin:hover {
     background-color: #F1C40F;
     color: white;
 	text-decoration:none;
 }
 
+.btn_signout, .btn_signout:link, .btn_signout:visited {
+    background-color: transparent;
+    font-family: "Bryant";
+    border-radius: 0;
+    color: white;
+    border: 1px solid #F1C40F; /*yellow*/
+    width:185px;
+    margin-top:30px;
+    float:right;
+    text-align:center;
+    height:36px;
+    font-size: 18px;
+    line-height: 1.2222;
+}
+.btn_signout:active, .btn_signout:hover {
+    background-color: #F1C40F;
+    color: white;
+    text-decoration:none;
+}
 .btn-save {
     background-color: #F1C40F;
     font-family: "Bryant";
@@ -453,7 +472,8 @@ padding-right: 30px;
     position: absolute;
 	color:white;
     right: 0px;
-    margin-top:-17px;
+    margin-top: -18px;
+    margin-right: 8px;
     pointer-events: none;
 }
 
@@ -524,7 +544,7 @@ font-family: "Bryant";
 .thumbnail
 {
     height: 100%;
-    width: 351px;
+    width: 342px;
     display: block;
     float:left;
     font-family: "Bryant";
@@ -538,7 +558,7 @@ font-family: "Bryant";
     padding-left: 0px;*/
     padding-top: 0px;
     padding-bottom: 0px;
-	margin-left: -1px;
+	margin-left: -2px;
 	margin-right: 4px;
     /*margin-top: -10px;*/
     margin-bottom: 15px;
@@ -644,6 +664,6 @@ border: 1px solid #FF4500;
 }
 .map-div
 {
-    width: 40%; height: 650px; border: 1px solid red; float: right; margin-right:15px;
+    width: 45%; height: 650px; border: 1px solid red; float: right; margin-right:15px;
     position:relative;
 }

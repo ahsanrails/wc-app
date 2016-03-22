@@ -10,20 +10,38 @@ class PListingsController < ApplicationController
     @rooms = PListing.uniq.pluck(:room)
     @bathroom = PListing.uniq.pluck(:bathroom)
     @rent_price = PListing.uniq.pluck(:total_rent)
+  
+ 
+  @hash = Gmaps4rails.build_markers(@p_listings) do |plisting, marker|
+  marker.lat plisting.latitude
+  marker.lng plisting.longitude
+  marker.infowindow plisting.street
+
+       #  marker.picture({
+       # "url" => "marker-logo.png",
+       # "width" =>  32,
+       # "height" => 32})
+
+  marker.json({title: plisting.title})
+end
+
   end
+  
+def show
 
-
-
+  # @p_listings_parameters = PListing.find(params[:id]).parameters
+  # @p_listing = PListing.find params[:id]
+  
+  @hash = Gmaps4rails.build_markers(@p_listing) do |plisting, marker|
+    marker.lat plisting.latitude
+    marker.lng plisting.longitude
+    marker.infowindow plisting.street
+    #marker.json({title: plisting.title})
+  end
+end
   # GET /p_listings/1
   # GET /p_listings/1.json
 
-# def index
-#   @search = Search.new
-#   @ptypes = PListing.uniq.pluck(:property_type)
-#   @rooms = PListing.uniq.pluck(:room)
-#   @bathroom = PListing.uniq.pluck(:bathroom)
-#   @rent_price = PListing.uniq.pluck(:total_rent)
-# end
 
   # GET /p_listings/new
   def new
@@ -39,7 +57,6 @@ class PListingsController < ApplicationController
   # POST /p_listings.json
   def create
     @p_listing = PListing.new(p_listing_params)
-
     respond_to do |format|
       if @p_listing.save
         format.html { redirect_to @p_listing, notice: 'P listing was successfully created.' }

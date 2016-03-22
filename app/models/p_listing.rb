@@ -1,4 +1,14 @@
 class PListing < ActiveRecord::Base
+
+	# before_save :do_something
+
+	# def do_something
+	# 	self.total_time = self.time_out - self.time_in
+	# end
+
+geocoded_by :street
+after_validation :geocode
+
 	  has_attached_file :p_image,
                     :styles => {
                       :thumb => "75x75>",
@@ -13,5 +23,7 @@ class PListing < ActiveRecord::Base
     	all 
     	end
     end
+
+
 
 end

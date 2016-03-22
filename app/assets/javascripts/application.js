@@ -10,19 +10,17 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
-//= require bootstrap/alert
-//= require bootstrap/button
-//= require bootstrap/dropdown
 //= require bootstrap/modal
-//= require bootstrap/transition
 
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require bootstrap
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require_tree .
+//= require underscore
+//= require gmaps/google
+
 
 $(function() {
   $('#p_listing_p_image').on('change', function(event) {

@@ -5,10 +5,7 @@ before_filter :configure_sign_up_params, only: [:create]
   # GET /resource/sign_up
   def new
    super
-    #   respond_to do |format|
-    #   format.html
-    #   format.js
-    # end
+  
   end
 
   # POST /resource

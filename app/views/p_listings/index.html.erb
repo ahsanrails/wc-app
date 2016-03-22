@@ -1,10 +1,12 @@
+
+
 <p id="notice"><%= notice %></p>
 
 
 <br><br>
 <div class="container-fluid">
 
-<div class="col-md-7 col-sm-10 col-xs-12">
+<div class="col-md-7 col-sm-10 col-xs-12" style="width: 53.333333%;">
 <div class="row">
 
 <%= form_for @search, html: {class: "form-inline"} do |s| %>
@@ -87,48 +89,30 @@
 <%= link_to 'Add New', new_p_listing_path, class: 'btn btn-default' %>
 </div>
 
-
-
-
-
-
-
 <br><br>
 
 </div>
 
-<script>
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers([
-    {
-      "lat": 0,
-      "lng": 0,
-      "picture": {
-        "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-        "width":  32,
-        "height": 32
-      },
-      "infowindow": "hello!"
-    }
-  ]);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
-</script>
 
 <div class="hidden-xs hidden-sm">
 
 <div class="row">
 
   <div class="map-div" id="map">
-<script>
-    markers = handler.addMarkers(<%=raw @hash.to_json %>);
-</script>
+
   </div>
   
 </div>
 </div>
-  
+ 
+<script type="text/javascript">
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+</script>
+
 </div>
 

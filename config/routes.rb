@@ -7,12 +7,14 @@ Rails.application.routes.draw do
     :confirmations => "users/confirmations"
   }
 
-  devise_scope :user do
-    get "signup", to: "users/registrations#new"
-    get "signin", to: "users/sessions#new"
-    delete "signout", to: "users/sessions#destroy"
-  end
+  # devise_scope :user do
+  #   get "signup", to: "users/registrations#new"
+  #   get "signin", to: "users/sessions#new"
+  #   delete "signout", to: "users/sessions#destroy"
+  # end
 
+  get "/popups/signup" => "popup#signup"
+  get "/popups/login" => "popup#login"
 
   resources :p_listings
   #devise_for :users
