@@ -75,29 +75,6 @@ ActiveRecord::Schema.define(version: 20160307091405) do
     t.datetime "propertyimage_updated_at"
   end
 
-  create_table "plistings", force: :cascade do |t|
-    t.string   "display_type"
-    t.string   "use_type"
-    t.string   "property_type"
-    t.string   "title"
-    t.string   "street"
-    t.string   "house_no"
-    t.string   "city_place"
-    t.string   "zip_code"
-    t.string   "flat_size"
-    t.string   "room"
-    t.string   "bathroom"
-    t.string   "total_rent"
-    t.string   "date"
-    t.string   "description"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
   create_table "searches", force: :cascade do |t|
     t.string   "p_type"
     t.string   "bathroom"
@@ -118,10 +95,15 @@ ActiveRecord::Schema.define(version: 20160307091405) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 

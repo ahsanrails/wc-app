@@ -1,5 +1,5 @@
  <div class="modal fade" id="myModal-signup" role="dialog">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-sm" style="margin-top:110px;">
 
       <!-- Modal content-->
       <div class="modal-content">
@@ -38,7 +38,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control login_field_height', placeholder: 'Repeat Password' %>
   </div>
 <br>
-<p style="margin-left:12px;"><b><span style="color:#FF4500;">Conditions</span> and <span style="color:#FF4500;">Private Policy</span> accepted </b></p>
+<p class="condition-line"><b><span style="color:#FF4500;">Conditions</span> and <span style="color:#FF4500;">Private Policy</span> accepted </b></p>
   <div class="form-group">
     <%= f.submit "Register", class: "btn_register" %>
   </div>
@@ -47,9 +47,10 @@
 
         </div>
         <div class="modal-footer">
-        <p class="test-font" style="margin-right:46px; font-size: 14px;"><b>
-         Have you account ? <%= link_to "Signin", '/popups/login',remote:"true", style:"color:#FF4500;" %>
-        </b></p>
+        <p class="signup-footer">
+         Have you account ? <%= link_to "Signin", '/popups/login',remote:"true", style:"color:#FF4500;", 
+         :type => :reset, "data-dismiss" => "modal", "aria-hidden" => "true" %>
+        </p>
         </div>
       </div>
 

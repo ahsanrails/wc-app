@@ -70,7 +70,7 @@ padding-right: 30px;
     position: absolute;
     color:white;
     right: 0px;
-    margin-top:-20px;
+    margin-top:-15px;
     pointer-events: none;
     margin-right: -265px;
 }
@@ -139,6 +139,9 @@ h4 a, h4 a:hover, h4 a:focus, h4 a:visited
     float:left;
     line-height:1.5;
 }
+a:hover, a:focus {
+    text-decoration: none !important; 
+}
 .search-input::-webkit-input-placeholder {
 color: white;
 font-family: 'Bryant';
@@ -168,6 +171,8 @@ text-decoration:none;
     color: white;
     text-decoration:none;	
 }
+
+/* Start Bootstrap Modals CSS*/
     .login_field_height
 {
     height:40px;
@@ -176,7 +181,7 @@ text-decoration:none;
 color: black !important;
 font-family: 'Bryant';
 font-weight: bold;
-font-size: 16px;
+font-size: 15px;
 }  
 
 .email {
@@ -234,8 +239,27 @@ font-size: 16px;
     text-align:center;
     height:40px;
     font-size: 20px;
-    font-style: bold;
+    font-weight: bold;
     line-height: 1.2222;
+}
+.condition-line
+{
+   font-family: "Bryant";
+   margin-left:20px; 
+}
+.signup-footer
+{
+font-family: "Bryant";
+margin-right:46px; 
+font-size: 14px;
+font-weight: bold;
+}
+.login-footer
+{
+   font-family: "Bryant";
+   margin-right:46px; 
+   font-size: 14px;  
+   font-weight: bold;
 }
 .btn_login{
     background-color: #F1C40F;
@@ -248,7 +272,7 @@ font-size: 16px;
     text-align:center;
     height:40px;
     font-size: 20px;
-    font-style: bold;
+    font-weight: bold;
     line-height: 1.2222;
 }
 .header-margin
@@ -259,6 +283,16 @@ border-bottom: 0px;
 {
 border-top: 2px;
 }
+.modal-header .close {
+    margin-top: -15px !important;
+    margin-right: -5px !important;
+}
+.modal-header, .close:active, .close:hover, .close:visited 
+{
+    text-decoration:none !important;
+}
+/* End Bootstrap Modals CSS*/
+
 .btn_post_property, .btn_post_property:link, .btn_post_property:visited {
     background-color: transparent;
     font-family: "Bryant";
@@ -517,15 +551,15 @@ border-top: 2px;
 }
 .inst
 {
-margin-left:-6px;
+margin-left:-4px;
 }
 .twt
 {
-margin-left:-8px; 
+margin-left:-4px; 
 }
 .fbk
 {
-margin-left:-8px; 
+margin-left:-2px; 
 }
 .btn-icon-btn:active, .btn-icon-btn:hover {
     background-color: #3E5C9A;
@@ -544,7 +578,7 @@ padding-right: 30px;
     position: absolute;
 	color:white;
     right: 0px;
-    margin-top: -18px;
+    margin-top: -15px;
     margin-right: 8px;
     pointer-events: none;
 }
@@ -616,7 +650,7 @@ font-family: "Bryant";
 .thumbnail
 {
     height: 100%;
-    width: 342px;
+    width: 339px;
     display: block;
     float:left;
     font-family: "Bryant";
@@ -763,5 +797,5 @@ border: 1px solid #FF4500;
     line-height: 39px !important; 
     font-size: 1.1em !important;
     text-align: center;
-    border-right: 1px solid rgba(0,0,0,0.2);
+    border-right: 1px solid white !important;
 }

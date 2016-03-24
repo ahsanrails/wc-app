@@ -1,6 +1,6 @@
   <!-- Modal -->
  <div class="modal fade" id="myModal-login" role="dialog">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-sm" style="margin-top:120px;">
     
       <!-- Modal content-->
       <div class="modal-content">
@@ -34,7 +34,9 @@
       <label class="checkbox-inline">
       <%= f.check_box :remember_me %>
       <b>Stay Logged in ?</label> 
-      <%= link_to "Forgot password ?", new_password_path(resource_name), style: "float:right; color:#FF4500;" %></b>
+      <%= link_to "Forgot password ?", '/popups/password', remote:"true", 
+      style: "float:right; color:#FF4500;"
+       %></b>
     </div>
   <% end -%>
 
@@ -45,9 +47,11 @@
 <br><br><br>
         </div>
         <div class="modal-footer">
-        <p class="test-font" style="margin-right:46px; font-size: 14px;"><b>
-         New Registration ? <%= link_to "Register", '/popups/signup', remote:"true", style:"color:#FF4500;" %>
-        </b></p>
+        <p class="login-footer">
+         New Registration ? 
+         <%= link_to "Register", '/popups/signup', remote:"true", style:"color:#FF4500;", 
+         :type => :reset, "data-dismiss" => "modal", "aria-hidden" => "true" %>
+        </p>
         </div>
       </div>
       </div>
