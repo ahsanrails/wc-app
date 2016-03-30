@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get "/popups/login" => "popup#login"
   get "/popups/password" => "popup#password"
 
+  get "/subscriptions/subscribe" => "subscriptions#subscribe"
+
   resources :p_listings
   #devise_for :users
   resources :pdetails

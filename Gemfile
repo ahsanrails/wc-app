@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.3.0"
+# ruby "2.3.0"
 
 gem "therubyracer"
 gem 'therubyrhino'
@@ -23,6 +23,9 @@ gem 'jquery-modal-rails'
 gem 'geocoder'
 gem 'gmaps4rails'
 
+# payments_module
+gem 'stripe-rails'
+gem 'stripe'
 gem 'bootstrap-social-rails'
 
 gem 'less-rails-bootstrap', '~> 3.0'
