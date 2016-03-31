@@ -8,7 +8,7 @@
         </div>
         <div class="modal-body test-font">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: user_registration_path) do |f| %>
    <%= devise_error_messages! %>
 
 
@@ -49,7 +49,7 @@
         </div>
         <div class="modal-footer">
         <p class="signup-footer">
-         Have you account ? <%= link_to "Signin", '/popups/login',remote:"true", style:"color:#FF4500;", 
+         Have you account ? <%= link_to "Signin", popups_login_path,remote:"true", style:"color:#FF4500;",
          :type => :reset, "data-dismiss" => "modal", "aria-hidden" => "true" %>
         </p>
         </div>

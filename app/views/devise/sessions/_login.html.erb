@@ -34,7 +34,7 @@
       <label class="checkbox-inline">
       <%= f.check_box :remember_me %>
       <b>Stay Logged in ?</label> 
-      <%= link_to "Forgot password ?", '/popups/password', remote:"true", 
+      <%= link_to "Forgot password ?", popups_password_path, remote:"true",
       style: "float:right; color:#FF4500;"
        %></b>
     </div>
@@ -49,7 +49,7 @@
         <div class="modal-footer">
         <p class="login-footer">
          New Registration ? 
-         <%= link_to "Register", '/popups/signup', remote:"true", style:"color:#FF4500;", 
+         <%= link_to "Register", popups_signup_path, remote:"true", style:"color:#FF4500;",
          :type => :reset, "data-dismiss" => "modal", "aria-hidden" => "true" %>
         </p>
         </div>

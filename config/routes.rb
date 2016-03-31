@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => {
-
     :registrations => "users/registrations",
     :sessions => "users/sessions",
     :passwords => "users/passwords",
@@ -17,7 +16,16 @@ Rails.application.routes.draw do
   get "/popups/login" => "popup#login"
   get "/popups/password" => "popup#password"
 
-  get "/subscriptions/subscribe" => "subscriptions#subscribe"
+  # get "/subscriptions/subscribe" => "subscriptions#subscribe"
+
+  # get "/registrations/new" => "registrations#new"
+
+  resources :registrations
+  resources :plans do
+    collection do
+      get :payments
+    end
+  end
 
   resources :p_listings
   #devise_for :users

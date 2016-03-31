@@ -26,7 +26,7 @@ module Wallchalkingnew
     config.assets.enabled = true
     config.assets.paths << Rails.root.join('/app/assets/fonts')
 
-    config.stripe.publishable_key = 'pk_test_nvtdo3ShlqSMw13HroWeQA9a'
+    # config.stripe.publishable_key = 'pk_test_nvtdo3ShlqSMw13HroWeQA9a'
   end
 
 end

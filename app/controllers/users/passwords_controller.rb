@@ -18,7 +18,6 @@ class Users::PasswordsController < Devise::PasswordsController
   def update
     super
   end
-
   # protected
 
   def after_resetting_password_path_for(resource)
@@ -27,7 +26,7 @@ class Users::PasswordsController < Devise::PasswordsController
 
   # The path used after sending reset password instructions
   def after_sending_reset_password_instructions_path_for(resource_name)
-    signin_path
+    "/"
   end
 
 end
