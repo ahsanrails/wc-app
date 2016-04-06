@@ -1,0 +1,73 @@
+
+   <br><br>
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid">
+
+
+    <div class="col-md-6 col-sm-10 col-xs-12">
+      <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title"><h4>Property Detail</h4></div>
+        </div>
+        <div class="panel-body">
+   <table class="table table-condensed table-bordered table-hover table-striped">
+
+  <tbody>
+
+        <tr><th><strong>Display Type:</strong></th><td><%= @p_listing.display_type %></td></tr>
+        <tr><th><strong>Type of Use:</strong></th><td><%=  @p_listing.use_type %></td></tr>
+        <tr><th><strong>Property Type:</strong></th><td><%= @p_listing.property_type %></td></tr>
+        <tr><th><strong>Title of Display:</strong></th><td><%= @p_listing.title %></td></tr>
+        <tr><th><strong>View Street:</strong></th><td><%= @p_listing.street %></td></tr>
+        <tr><th><strong>Huse No.:</strong></th><td><%= @p_listing.house_no %></td></tr>
+        <tr><th><strong>Place:</strong></th><td><%= @p_listing.city_place %></td></tr>
+        <tr><th><strong>Zip Code:</strong></th><td><%= @p_listing.zip_code %></td></tr>
+        <tr><th><strong>Residential Flat:</strong></th><td><%= @p_listing.flat_size %></td></tr>
+        <tr><th><strong>Room:</strong></th><td><%= @p_listing.room %></td></tr>
+        <tr><th><strong>Bathroom:</strong></th><td><%= @p_listing.bathroom %></td></tr>
+        <tr><th><strong>Total Rent:</strong></th><td><%= @p_listing.total_rent %></td></tr>
+        <tr><th><strong>Available From:</strong></th><td><%= @p_listing.date %></td></tr>
+        <tr><th><strong>Description:</strong></th><td><%= @p_listing.description %></td></tr>
+        <tr><th><strong>Long.:</strong></th><td><%= @p_listing.longitude %></td></tr>
+        <tr><th><strong>Lat.:</strong></th><td><%= @p_listing.latitude %></td></tr>
+        <tr><th><strong>Property Image:</strong></th><td><%= image_tag @p_listing.p_image.url(:small) %>
+        </td></tr>
+
+  </tbody>
+  </table>
+
+<%= link_to 'Edit', edit_p_listing_path(@p_listing), class: 'btn btn-default' %> |
+<%= link_to 'Back', p_listings_path, class: 'btn btn-default' %>
+
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+<div class="hidden-xs hidden-sm">
+
+<div class="row">
+
+  <div class="map-div" id="map">
+
+  </div>
+  
+</div>
+</div>
+
+<script type="text/javascript">
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+</script>
+
+</div>
+
