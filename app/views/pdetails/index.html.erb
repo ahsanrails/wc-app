@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+
+<div class="row">
+    <div class="col-md-8">
+   
+
+<% @pdetails.each do |pdetail| %>
+
+  <div class="col-sm-6">
+    <div class="thumbnail">
+      <%= image_tag pdetail.propertyimage.url(:small), :class => "style_image" %>
+      <div class="image-footer">
+        <p><strong><%= pdetail.location %> - <%= pdetail.city %></strong>
+        | Rent: $ <%= pdetail.rent %> |<br>
+         Size: <%= pdetail.size %> Sqft.
+         | Price: $ <%= pdetail.price %></p>
+        <%= link_to 'View', pdetail %>
+        <%= link_to 'Edit', edit_pdetail_path(pdetail) %>
+        <%= link_to 'Delete', pdetail, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+
+    </div>
+
+  </div>
+
+  
+<% end %>
+
+</div>
+</div>
+
+<br><br>
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<%= link_to 'Add New Property', new_pdetail_path, class: 'btn btn-default' %>
+
+</div>
+
+

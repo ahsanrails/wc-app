@@ -1,20 +1,31 @@
 .container
   .row
+<<<<<<< HEAD
     %section
       .wrapper-inside
         .reg-heading
           %p.heading-name Registration Details
+=======
+    .col-xs-6.col-sm-6.col-md-3.col-lg-3
+      .panel.panel-default
+>>>>>>> 63bbf5d79d7d015194efb59ee5f5de248d02d037
         = form_for @registration, html: { class: "basic-grey" } do |f|
           - if @registration.errors.any?
             #error_explanation
               %h2
+<<<<<<< HEAD
               = pluralize(@registration.errors.count, "error")
               prohibited this registration from being saved:
+=======
+                = pluralize(@registration.errors.count, "error")
+                prohibited this registration from being saved:
+>>>>>>> 63bbf5d79d7d015194efb59ee5f5de248d02d037
               %ul
                 - @registration.errors.full_messages.each do |message|
                   %li= message
           .field
             = f.hidden_field :plan_id, value: @plan.id
+<<<<<<< HEAD
           .field
             = f.label :full_name
             = f.text_field :full_name
@@ -27,3 +38,17 @@
           .field
             %script.stripe-button{src: "https://checkout.stripe.com/checkout.js",
                 data: {amount: @plan.price*100, description: @plan.name, key: Rails.application.secrets.stripe_publishable_key}}
+=======
+          .form-control
+            = f.label :full_name
+            = f.text_field :full_name
+          .form-control
+            = f.label :company
+            = f.text_field :company
+          .form-control
+            = f.label :contact
+            = f.text_field :contact
+          .form-control
+            %script.stripe-button{ src: "https://checkout.stripe.com/checkout.js",
+                  data: {amount: @plan.price*100, description: @plan.name, key: Rails.application.secrets.stripe_publishable_key}}
+>>>>>>> 63bbf5d79d7d015194efb59ee5f5de248d02d037

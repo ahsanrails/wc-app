@@ -1,6 +1,9 @@
 class Registration < ActiveRecord::Base
 belongs_to :plan
+<<<<<<< HEAD
 belongs_to :user
+=======
+>>>>>>> 63bbf5d79d7d015194efb59ee5f5de248d02d037
 
   def process_payment
     customer = Stripe::Customer.create email: email,

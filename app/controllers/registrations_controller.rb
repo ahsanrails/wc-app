@@ -1,5 +1,8 @@
 class RegistrationsController < ApplicationController
+<<<<<<< HEAD
   before_filter :authenticate_user!
+=======
+>>>>>>> 63bbf5d79d7d015194efb59ee5f5de248d02d037
   before_action :set_registration, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -18,11 +21,17 @@ class RegistrationsController < ApplicationController
   def create
       @registration = Registration.new registration_params.merge(email: stripe_params["stripeEmail"],
                                                                  card_token: stripe_params["stripeToken"])
+<<<<<<< HEAD
       @registration.user = current_user
       raise "Please, check registration errors" unless @registration.valid?
       @registration.process_payment
       @registration.save
       PaymentMailer.payment_email(current_user, @registration.plan, @registration).deliver
+=======
+      raise "Please, check registration errors" unless @registration.valid?
+      @registration.process_payment
+      @registration.save
+>>>>>>> 63bbf5d79d7d015194efb59ee5f5de248d02d037
       redirect_to @registration, notice: 'Registration was successfully created.'
     rescue
       flash[:error] = e.message

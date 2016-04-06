@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160401160135) do
+=======
+ActiveRecord::Schema.define(version: 20160330134833) do
+>>>>>>> 63bbf5d79d7d015194efb59ee5f5de248d02d037
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,7 +95,10 @@ ActiveRecord::Schema.define(version: 20160401160135) do
     t.string   "card_token"
     t.string   "email"
     t.integer  "plan_id"
+<<<<<<< HEAD
     t.integer  "user_id"
+=======
+>>>>>>> 63bbf5d79d7d015194efb59ee5f5de248d02d037
   end
 
   create_table "searches", force: :cascade do |t|

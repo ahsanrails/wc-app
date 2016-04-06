@@ -1,0 +1,29 @@
+<%= form_for(@cdn, :html => { :multipart => true }) do |f| %>
+  <% if @cdn.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cdn.errors.count, "error") %> prohibited this cdn from being saved:</h2>
+
+      <ul>
+      <% @cdn.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+ <div class="field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
